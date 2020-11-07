@@ -1,0 +1,103 @@
+{
+  "posts": [
+    {
+      "id": "1apX",
+      "brand": "APPLE",
+      "name": "Iphone X",
+      "OS": "IOS",
+      "image": "https://i.imgur.com/udkUcJU.png",
+      "memory": "8",
+      "storage": "128",
+      "price": "98,990",
+      "stock": "20"
+    },
+    {
+      "id": "2ss10",
+      "brand": "SAMSUNG",
+      "name": "S10",
+      "OS": "Android",
+      "image": "https://i.imgur.com/K0LXYjR.png",
+      "memory": "8",
+      "storage": "128",
+      "price": "50030",
+      "stock": "10"
+    },
+    {
+      "id": "3ipx",
+      "brand": "XIAOMI",
+      "name": "MI20",
+      "OS": "Android",
+      "image": "https://i.imgur.com/JSP1K2O.png",
+      "memory": "6",
+      "storage": "64",
+      "price": "19,990",
+      "stock": "7"
+    },
+    {
+      "id": "4uawip3",
+      "brand": "HUAWEI",
+      "name": "P30 Pro",
+      "image": "https://i.imgur.com/2jw8lO6.png",
+      "OS": "Android",
+      "memory": "8",
+      "storage": "128",
+      "price": "49,900",
+      "stock": "18"
+    },
+    {
+      "id": "5uawip3",
+      "brand": "HUAWEI",
+      "name": "Y9",
+      "image": "https://i.imgur.com/2jw8lO6.png",
+      "OS": "Android",
+      "memory": "8",
+      "storage": "64",
+      "price": "19,500",
+      "stock": "7"
+    },
+    {
+      "id": "6Aps5",
+      "brand": "Apple",
+      "name": "Iphone 5",
+      "image": "https://i.imgur.com/RGTlnye.png",
+      "OS": "IOS",
+      "memory": "8",
+      "storage": "64",
+      "price": "38,900",
+      "stock": "5"
+    },
+    {
+      "id": "7s4mi",
+      "brand": "XIAOMI",
+      "name": "M10",
+      "image": "https://i.imgur.com/jZ1i4af.png",
+      "OS": "Android",
+      "memory": "4",
+      "storage": "64",
+      "price": "11,200",
+      "stock": "12"
+    },
+    {
+      "id": "8ss4smsn",
+      "brand": "SAMSUNG",
+      "name": "S11",
+      "image": "https://i.imgur.com/EcimX3A.png",
+      "OS": "Android",
+      "memory": "12",
+      "storage": "256",
+      "price": "54,500",
+      "stock": "13"
+    },
+    {
+      "id": "4uawip3",
+      "brand": "HUAWEI",
+      "name": "Mate 20 pro",
+      "image": "https://i.imgur.com/cMjWlv2.png",
+      "OS": "Android",
+      "memory": "6",
+      "storage": "128",
+      "price": "39,500",
+      "stock": "23"
+    }
+  ]
+}
