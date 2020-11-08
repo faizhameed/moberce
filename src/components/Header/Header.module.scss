@@ -1,4 +1,6 @@
 .header {
+  display: grid;
   padding: 20px;
-  background-color: #ffffff;
+  height: 100%;
+  grid-template-columns: auto 1fr auto;
 }

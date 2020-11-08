@@ -5,7 +5,7 @@ import Slider from "@material-ui/core/Slider";
 
 const useStyles = makeStyles({
   root: {
-    width: 300,
+    width: 200,
   },
 });
 
@@ -20,11 +20,10 @@ function CustomSlider() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
   return (
     <div className={classes.root}>
       <Typography id="range-slider" gutterBottom>
-        Price Range
+        <p> Price Range</p>
       </Typography>
       <Slider
         value={value}

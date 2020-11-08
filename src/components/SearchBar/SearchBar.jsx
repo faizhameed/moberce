@@ -6,13 +6,22 @@ import { green } from "@material-ui/core/colors";
 const useStyles = makeStyles({
   button: {
     background: "#ffffff20",
+    "&:hover": {
+      background: "#cecece",
+    },
+  },
+  container: {
+    alignSelf: "center",
+  },
+  icon: {
+    color: "#7B1FA2",
   },
 });
 const SearchBar = () => {
   const searchInput = React.createRef();
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.container}>
       <InputBase
         type="text"
         name="search"
@@ -20,7 +29,7 @@ const SearchBar = () => {
         ref={searchInput}
       />
       <Button className={classes.button}>
-        <SearchIcon />
+        <SearchIcon className={classes.icon} />
       </Button>
     </div>
   );
