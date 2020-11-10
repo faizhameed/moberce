@@ -1,23 +1,16 @@
 import Card from "../Card/Card";
 import React, { useEffect, useState } from "react";
 import Styles from "./ItemList.module.scss";
-
-const ItemList = () => {
-  const [state, setState] = useState({
-    data: null,
-  });
+import { connect } from "react-redux";
+import { fetch_mobile } from "../../redux/items/actions";
+const ItemList = ({ data, error, pending, fetch_mobile }) => {
   useEffect(() => {
-    (async () => {
-      const response = await fetch("http://localhost:3004/posts");
-      const data = await response.json();
-      setState((state) => ({ ...state, data: data }));
-      console.log(data);
-    })();
+    fetch_mobile();
   }, []);
   return (
     <div className={Styles.container}>
-      {state.data ? (
-        state.data.map((item) => {
+      {data ? (
+        data.map((item) => {
           return <Card item={item} key={item.id} />;
         })
       ) : (
@@ -26,5 +19,14 @@ const ItemList = () => {
     </div>
   );
 };
+const mapStateToProps = ({ mobileList: { data, error, pending } }) => ({
+  data,
+  error,
+  pending,
+});
 
-export default ItemList;
+const mapDispatchToProps = (dispatch) => ({
+  fetch_mobile: () => dispatch(fetch_mobile()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
