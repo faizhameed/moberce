@@ -19,7 +19,7 @@
       "image": "https://i.imgur.com/K0LXYjR.png",
       "memory": "8",
       "storage": "128",
-      "price": "50030",
+      "price": "50,030",
       "stock": "10"
     },
     {
@@ -34,7 +34,7 @@
       "stock": "7"
     },
     {
-      "id": "4uawip3",
+      "id": "4xxwip3",
       "brand": "HUAWEI",
       "name": "P30 Pro",
       "image": "https://i.imgur.com/2jw8lO6.png",

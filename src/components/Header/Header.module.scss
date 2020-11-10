@@ -2,5 +2,9 @@
   display: grid;
   padding: 20px;
   height: 100%;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
+  @media screen and(max-width:500px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }

@@ -1,0 +1,41 @@
+.container {
+  text-align: left;
+  padding: 15px;
+  margin: 0px 20px 50px;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h3,
+  h2,
+  h4 {
+    font-weight: 400;
+    margin: 2px 0;
+  }
+  h2 {
+    text-align: center;
+  }
+  img {
+    width: 100px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+  .description {
+    margin: 15px 0;
+    h4 {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  button {
+    display: block;
+    margin: 10px auto 0;
+  }
+  &:hover {
+    transform: scale(1.07);
+  }
+}

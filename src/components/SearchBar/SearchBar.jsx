@@ -16,6 +16,10 @@ const useStyles = makeStyles({
   icon: {
     color: "#7B1FA2",
   },
+  input: {
+    width: "75%",
+    maxWidth: "300px",
+  },
 });
 const SearchBar = () => {
   const searchInput = React.createRef();
@@ -27,6 +31,7 @@ const SearchBar = () => {
         name="search"
         placeholder="Search Mobiles..."
         ref={searchInput}
+        className={classes.input}
       />
       <Button className={classes.button}>
         <SearchIcon className={classes.icon} />

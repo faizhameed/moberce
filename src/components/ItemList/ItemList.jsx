@@ -1,4 +1,4 @@
-import { StylesProvider } from "@material-ui/core";
+import Card from "../Card/Card";
 import React, { useEffect, useState } from "react";
 import Styles from "./ItemList.module.scss";
 
@@ -18,12 +18,7 @@ const ItemList = () => {
     <div className={Styles.container}>
       {state.data ? (
         state.data.map((item) => {
-          return (
-            <div className={Styles.itemContainer}>
-              <img src={item.image} alt="mobile" />
-              <h3 key={item.id}>{item.name}</h3>
-            </div>
-          );
+          return <Card item={item} key={item.id} />;
         })
       ) : (
         <h3>Loading...</h3>

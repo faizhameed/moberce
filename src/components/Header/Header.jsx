@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     padding: "10px",
     textAlign: "center",
     fontWeight: "400",
+    margin: 0,
   },
   icon: {
     color: "#7B1FA2",
