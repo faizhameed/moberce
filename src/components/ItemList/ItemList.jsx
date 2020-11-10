@@ -1,15 +1,16 @@
 import Card from "../Card/Card";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Styles from "./ItemList.module.scss";
 import { connect } from "react-redux";
 import { fetch_mobile } from "../../redux/items/actions";
-const ItemList = ({ data, error, pending, fetch_mobile }) => {
+const ItemList = ({ data, pending, fetch_mobile }) => {
   useEffect(() => {
     fetch_mobile();
+    console.log("only run once");
   }, []);
   return (
     <div className={Styles.container}>
-      {data ? (
+      {data && !pending ? (
         data.map((item) => {
           return <Card item={item} key={item.id} />;
         })
@@ -19,9 +20,8 @@ const ItemList = ({ data, error, pending, fetch_mobile }) => {
     </div>
   );
 };
-const mapStateToProps = ({ mobileList: { data, error, pending } }) => ({
+const mapStateToProps = ({ mobileList: { data, pending } }) => ({
   data,
-  error,
   pending,
 });
 

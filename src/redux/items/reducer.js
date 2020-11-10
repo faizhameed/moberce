@@ -6,15 +6,22 @@ const INITIAL_STATE = {
   error: null,
 };
 
+const {
+  MOBILE_LIST_PENDING,
+  MOBILE_LIST_SUCCESS,
+  MOBILE_LIST_FAILED,
+} = mobile_list_types;
 function mobileList(state = INITIAL_STATE, action) {
+  console.log(action);
   switch (action.type) {
-    case mobile_list_types.MOBILE_LIST_PENDING:
+    case MOBILE_LIST_PENDING:
       return { ...state, pending: true };
-    case mobile_list_types.MOBILE_LIST_SUCCESS:
+    case MOBILE_LIST_SUCCESS:
       return { ...state, data: action.payload, pending: false, error: null };
-    case mobile_list_types.MOBILE_LIST_FAILED:
+    case MOBILE_LIST_FAILED:
       return { ...state, data: null, pending: false, error: action.payload };
     default:
+      console.log("data is changer");
       return state;
   }
 }
