@@ -1,13 +1,15 @@
 import { Button, Divider } from "@material-ui/core";
-import { orange } from "@material-ui/core/colors";
 import React from "react";
 import Styles from "./Card.module.scss";
+import LazyLoad from "react-lazyload";
 
 const Card = (props) => {
   const { item } = props;
   return (
     <div className={Styles.container}>
-      <img src={item.image} alt="mobile" />
+      <LazyLoad height={200}>
+        <img src={item.image} alt="mobile" />
+      </LazyLoad>
       <h2 key={item.id}>{item.name}</h2>
       <Divider
         style={{

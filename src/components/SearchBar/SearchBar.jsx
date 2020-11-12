@@ -4,6 +4,7 @@ import { Button, InputBase } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { search_mobile } from "../../redux/items/actions";
 import { connect } from "react-redux";
+import debounce from "../../utils/debounce";
 const useStyles = makeStyles({
   button: {
     background: "#ffffff20",
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
 const SearchBar = ({ search_mobile }) => {
   const searchInput = React.createRef();
   const classes = useStyles();
-
+  const efficientSearch = debounce(search_mobile, 350);
   return (
     <div className={classes.container}>
       <InputBase
@@ -34,15 +35,11 @@ const SearchBar = ({ search_mobile }) => {
         placeholder="Search Mobiles..."
         inputRef={searchInput}
         className={classes.input}
-        onKeyDown={(e) => {
-          if ((e.key = "Enter")) {
-            search_mobile(searchInput.current.value);
-          }
-        }}
+        onChange={() => efficientSearch(searchInput.current.value)}
       />
       <Button
         className={classes.button}
-        onClick={() => search_mobile(searchInput.current.value)}
+        onClick={() => efficientSearch(searchInput.current.value)}
       >
         <SearchIcon className={classes.icon} />
       </Button>
